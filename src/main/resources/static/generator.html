@@ -29,16 +29,46 @@
                 </div>
             </div>
         </nav>
-        <div class="container">
+        <div class="container" style="background: #015123; color: white; width: 80%">
             <div class="text-center mt-5">
-                <h1>A Bootstrap 5 Starter Template</h1>
-                <p class="lead">A complete project boilerplate built with Bootstrap</p>
-                <p>Bootstrap v5.1.3</p>
+                <h6><br></h6>
+                <h2>Input Parameters</h2>
+                <p>Please input parameters for start, stop, Fizz, and Buzz numbers. All should be integers above 0.</p>
             </div>
+            <div class="row">
+                <h5>Start and Stop Numbers:</h5>
+                <div class="col">
+                    <input type="number" id="start" class="form-control" min="0">
+                </div>
+                <div class="col">
+                    <input type="number" id="stop" class="form-control" min="0">
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <h5>Fizz and Buzz Numbers:</h5>
+                <div class="col">
+                    <input type="number" id="fizz" class="form-control" min="1">
+                </div>
+                <div class="col">
+                    <input type="number" id="buzz" class="form-control" min="1">
+                </div>
+            </div>
+            <br>
+            <div class="row-6", style="margin-left: auto; margin-right: auto">
+                <button type="button" class="btn btn-primary btn-block btn-lrg" style="width: 100%" onclick="generate()">Generate</button>
+            </div>
+            <br>
         </div>
-        <!-- Bootstrap core JS-->
+        <div class="container" style="color: black; width: 80%">
+            <div class="text-center mt-5">
+                <h6><br></h6>
+                <h2>Output</h2>
+                <textarea id="output" rows="5" style="width: 100%;" disabled>Output data will appear here in a comma separated list.</textarea>
+            </div>
+            <br>
+        </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
         <script src="js/generator.js"></script>
     </body>
 </html>

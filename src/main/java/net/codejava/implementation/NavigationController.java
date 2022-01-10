@@ -13,11 +13,6 @@ public class NavigationController {
         return new ModelAndView("index.html");
     }
 
-    @RequestMapping("/welcome")
-    public ModelAndView welcome() {
-        return new ModelAndView("welcome.html");
-    }
-
     @RequestMapping(value = "/generator", method = RequestMethod.GET)
     public ModelAndView generator() {
         return new ModelAndView("generator.html");
