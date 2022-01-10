@@ -13,6 +13,12 @@ function getInput() {
     console.log("Fizz:  "+fizz);
     console.log("Buzz:  "+buzz);
 
+    // Fixes any editing to boxes caused by erroneous previous input
+    document.getElementById("start").style = "";
+    document.getElementById("stop").style = "";
+    document.getElementById("fizz").style = "";
+    document.getElementById("buzz").style = "";
+
     // Convert into returnable array
     return [start, stop, fizz, buzz];
 }
@@ -96,7 +102,33 @@ function generate() {
         // Debugging logging
         console.log("Final list: "+fizzBuzzNums);
     } else {
-        document.getElementById("output").innerHTML = "Output data will appear here in a comma separated list.";
+        let errMessage = "ERROR: The following issue(s) were found in your input:"; // Holds error message
+
+        // Write error messages
+        // Highlight in red problematic boxes
+        if (!valid[0]) {
+            errMessage += "\n - The start number must be an integer greater than or equal to 0";
+            document.getElementById("start").style = "background: #FF9F9F";
+        }
+        if (!valid[1]) {
+            errMessage += "\n - The stop number must be an integer greater than or equal to 0";
+            document.getElementById("stop").style = "background: #FF9F9F";
+        }
+        if (!valid[2]) {
+            errMessage += "\n - The Fizz number must be an integer greater than or equal to 1";
+            document.getElementById("fizz").style = "background: #FF9F9F";
+        }
+        if (!valid[3]) {
+            errMessage += "\n - The Buzz number must be an integer greater than or equal to 1";
+            document.getElementById("buzz").style = "background: #FF9F9F";
+        }
+        if (!valid[4]) {
+            errMessage += "\n - The start number must be less than the stop number";
+            document.getElementById("start").style = "background: #FF9F9F";
+            document.getElementById("stop").style = "background: #FF9F9F";
+        }
+
+        document.getElementById("output").innerHTML = errMessage;
     }
 }
 
