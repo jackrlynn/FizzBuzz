@@ -38,6 +38,18 @@ interaction with databases nor control of models in this iteration.
 ### Models
 While the system does mostly follow MVC structure, no models are currently used as there is no need for saved data given
 the prompt.
-# Design
+## Design
+FizzBuzz's design is broken up into two parts: a game and a generator.
+### Generator
+The generator, more than anything, is a proof-of-concept that the FizzBuzz game works and fulfills the prompt. The user
+can enter unique integer values for start, stop, Fizz, and Buzz digits and will get returned a comma-seperated list of their
+respective FizzBuzz values. Within the function is a checking mechanism that makes sure all-of-the input is valid, such as the
+stop digit being larger than the start and Fizz and Buzz digits being greater than or equal to 1.
+### Game
+FizzBuzz first and foremost is a game, so it is best-served being presented to the user as such. The core design of the 
+game structure is that there are four buttons--Fizz, Buzz, FizzBuzz, and the current number--that the user must of choose
+from as the next digit in the sequence. When pressed, the game validates the user's choice using the same FizzBuzz function
+used in the generator. If the user and check function match, then the user moves on to the next round with updated buttons;
+if not, the game is over and the user is prompted to select again. A score is also included to make the page feel more game-like.
 ## References
 <b>Template Bootstrap HTML:</b> Bare (Sep 20, 2013) - Start Bootstrap
