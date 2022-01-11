@@ -1,4 +1,5 @@
 # FizzBuzz Web App
+<b>GitHub:</b> [jackrlynn/FizzBuzz](https://github.com/jackrlynn/FizzBuzz)
 ## Overview
 The FizzBuzz app is an interactive web environment in which users can play and utilize the functionality of the classic
 game FizzBuzz. <b>Generator</b> is an interactive webpage in which users can enter parameters for start, stop, Fizz, and
@@ -52,4 +53,4 @@ from as the next digit in the sequence. When pressed, the game validates the use
 used in the generator. If the user and check function match, then the user moves on to the next round with updated buttons;
 if not, the game is over and the user is prompted to select again. A score is also included to make the page feel more game-like.
 ## References
-<b>Template Bootstrap HTML:</b> Bare (Sep 20, 2013) - Start Bootstrap
+<b>Template Bootstrap HTML and CSS:</b> [Bare (Sep 20, 2013) - Start Bootstrap](https://startbootstrap.com/template/bare)
