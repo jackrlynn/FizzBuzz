@@ -1,5 +1,6 @@
 # FizzBuzz Web App
-<b>GitHub:</b> [jackrlynn/FizzBuzz](https://github.com/jackrlynn/FizzBuzz)
+<b>GitHub:</b> [jackrlynn/FizzBuzz](https://github.com/jackrlynn/FizzBuzz) (Gives information of the development process
+in commits.)
 ## Overview
 The FizzBuzz app is an interactive webpage in which users can play and utilize the functionality of the classic schoolhouse
 game FizzBuzz. FizzBuzz is played by counting from 1 to infinity, in which numbers divisible by 3 are replaced with Fizz,
