@@ -1,19 +1,22 @@
+// Edits game.html
+// Author: Jack Lynn
+
 // Hidden variable that keeps current track of where the player is
 let currVal = 1;
 let score = 0;
 
-// Runs a check of the current round upon button click
-//   choice: the choice the user made
+// checkRound: check of the current round upon button click (corresponds to specific HTML elements)
+//   Inputs:  choice - string - button choice being made by user, such as "Fizz", "Buzz", "FizzBuzz", or "Num"
 function checkRound(choice) {
 
-    // Special case: the choice is a number, so the choice needs to be updated
+    // Special case: when the current guess is an integer, the value must be taken from the page
     if (choice !== "Fizz" && choice !== "Buzz" && choice !== "FizzBuzz") {
-        choice = parseInt(document.getElementById("num").innerHTML);
+        choice = document.getElementById("num").innerHTML;
     }
 
     // Check to see if user made the right choice
     let correct = fizzBuzz(currVal, 3, 5);
-    if (correct === choice) {
+    if (correct === choice) { // Correct choice made
 
         // Update currVal
         currVal++;
@@ -32,7 +35,6 @@ function checkRound(choice) {
         } else {
             score += 10;
         }
-
         document.getElementById("score").innerHTML = "Score: " + score;
 
     } else { // Incorrect choice made
@@ -52,6 +54,7 @@ function checkRound(choice) {
 
 }
 
+// restart: starts the game back up again after finishing previous round
 function restart() {
 
     // Reset currVal

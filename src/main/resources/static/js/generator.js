@@ -1,3 +1,9 @@
+// Edits generator.html
+// Author: Jack Lynn
+
+// getInput: extracts the inputs (but does not validate yet) from the corresponding HTML page
+//   Inputs:  all inputs are extracted from page, including string inputs for start, stop, Fizz, and Buzz numbers
+//   Outputs: an 4-long array in the following order: [start, stop, fizz, buzz]
 function getInput() {
 
     // Extract all numbers from document
@@ -23,6 +29,10 @@ function getInput() {
     return [start, stop, fizz, buzz];
 }
 
+// validateNumber: check to see if the input is valid (greater than min value and not NaN)
+//   Inputs:  val - int - the number being validated
+//            min - int - the minimum value allowed
+//   Outputs: true if a valid input; false if it breaks some rule
 function validateNumber(val, min) {
     if (val >= min && !isNaN(val)) {
         return true;
@@ -30,6 +40,9 @@ function validateNumber(val, min) {
     return false;
 }
 
+// generate: generate the comma separated list of FizzBuzz values, including checks for proper parameters
+//  Inputs:  start, stop, Fizz, and Buzz values extracted from number entry boxes on HTML page
+//  Outputs: comma-delimited list of FizzBuzz values displayed on HTML page
 function generate() {
 
     // Get input values
@@ -80,6 +93,8 @@ function generate() {
 
         // Debugging logging
         console.log("Final list: "+fizzBuzzNums);
+
+    // Display an error message describing the validity of the user's input
     } else {
         let errMessage = "ERROR: The following issue(s) were found in your input:"; // Holds error message
 
@@ -107,6 +122,7 @@ function generate() {
             document.getElementById("stop").style = "background: #FF9F9F";
         }
 
+        // Display error message to HTML page
         document.getElementById("output").innerHTML = errMessage;
     }
 }
